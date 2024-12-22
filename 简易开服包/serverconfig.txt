@@ -1,0 +1,5 @@
+maxplayers=20
+language=zh-CN
+port=7777
+worldpath=.\Worlds\
+ip = 0.0.0.0
