@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/简易开服包/tshock
+/简易开服包/ServerLog.txt
