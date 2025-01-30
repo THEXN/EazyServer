@@ -1,0 +1,10 @@
+{
+  "开启插件": true,
+  "组对应的队伍": {
+    "guest": "pink",
+    "default": "蓝队",
+    "owner": "蓝队",
+    "admin": "green",
+    "vip": "none"
+  }
+}
