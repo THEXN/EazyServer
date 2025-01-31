@@ -1,0 +1,113 @@
+{
+  "组列表": [
+    {
+      "组名字": "guest",
+      "父组": "",
+      "添加的权限": [
+      ],
+      "删除的权限": [ 
+        "tshock.world.modify",
+        "tshock.account.register",
+        "tshock.account.login",
+        "tshock.partychat",
+        "tshock.thirdperson",
+        "tshock.canchat",
+        "tshock.synclocalarea",
+        "tshock.sendemoji"
+      ]
+    },
+    {
+      "组名字": "default",
+      "父组": "guest",
+      "添加的权限": [
+        "tshock.world.movenpc",
+        "tshock.world.time.usesundial",
+        "tshock.tp.pylon",
+        "tshock.tp.demonconch",
+        "tshock.tp.magicconch",
+        "tshock.tp.tppotion",
+        "tshock.tp.rod",
+        "tshock.tp.wormhole",
+        "tshock.npc.startdd2",
+        "tshock.npc.spawnpets",
+        "tshock.npc.summonboss",
+        "tshock.npc.startinvasion",
+        "tshock.npc.hurttown",
+        "tshock.npc.butcher",
+        "tshock.clear",
+        "tshock.tp.getpos",
+        "tshock.tp.home",
+        "tshock.tp.spawn",
+        "tshock.npc.hurttown",
+        "tshock.ignore.itemstack",
+        "tshock.item.spawn",
+        "tshock.journey.research",
+        "tshock.slap",
+        "tshock.warp"
+
+      ],
+      "删除的权限": [ 
+        "tshock.world.modify"
+      ]
+    },
+    {
+      "组名字": "build",
+      "父组": "default",
+      "添加的权限": [
+        "tshock.admin.antibuild",
+        "tshock.world.time.*",
+        "tshock.npc.clearanglerquests",
+        "tshock.world.converthardmode",
+        "tshock.item.give",
+        "tshock.godmode.*",
+        "tshock.heal",
+        "tshock.journey.*",
+        "!tshock.journey.biomespreadfreeze",
+        "tshock.npc.rename",
+        "tshock.respawn.*",
+        "tshock.admin.seeplayerids"
+
+      ],
+      "删除的权限": [
+      ]
+    },
+    {
+      "组名字": "buildadmin",
+      "父组": "build",
+      "添加的权限": [
+        "tshock.admin.antibuild",
+        "tshock.admin.ban",
+        "tshock.ignore.sendtilesquare",
+        "tshock.buff.*",
+        "tshock.world.*",
+        "tshock.admin.kick",
+        "tshock.kill",
+        "tshock.npc.*",
+        "tshock.admin.mute",
+        "tshock.tp.*"
+
+      ],
+      "删除的权限": [
+      ]
+    },
+    {
+      "组名字": "admin",
+      "父组": "buildadmin",
+      "添加的权限": [
+        "tshock.admin.broadcast",
+        "tshock.cfg.password",
+        "tshock.cfg.reload",
+        "tshock.ignore.*",
+        "tshock.admin.region",
+        "tshock.admin.tileban",
+        "tshock.admin.warp",
+        "tshock.reservedslot",
+        "tshock.admin.savessi",
+        "tshock.info",
+        "tshock.item.*"
+      ],
+      "删除的权限": [
+      ]
+    }
+  ]
+}
