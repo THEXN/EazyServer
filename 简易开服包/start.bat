@@ -3,7 +3,7 @@ chcp 936
 @echo off
 cls
 :start
-TShock.Server.exe -config serverconfig.txt
+TShock.Server.exe -lang 7 -config serverconfig.txt
 @echo.
 @echo 重启服务器...
 @echo.

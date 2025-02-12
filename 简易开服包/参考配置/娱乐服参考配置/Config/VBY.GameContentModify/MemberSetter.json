@@ -1,0 +1,15 @@
+{
+  "MemberName": {
+    "可掉落图格": {
+      "Name": "Terraria.ID.TileID+Sets.Falling",
+      "Tip": "可掉落图格，可以用来把沙子一类设置为false来防止掉落，不要给原本不可掉落的设置为true，那些并没有相应弹幕承载"
+    },
+    "物品免疫熔岩摧毁": "Terraria.ID.ItemID+Sets.IsLavaImmuneRegardlessOfRarity",
+    "检测宽度": {
+      "Name": "Terraria.NPC.sWidth",
+      "Tip": "本意是屏幕宽度，tr用此来计算怪物生成，npc传送回家之类需要不在玩家屏幕内的操作"
+    },
+    "检测高度": "Terraria.NPC.sHeight"
+  },
+  "MemberValue": {}
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "NPCType": 475,
+    "NpcStack": 1,
+    "Action": 0,
+    "ItemType": 3092,
+    "ItemStack": 1,
+    "OnlyEqualItemStack": true,
+    "CrimsonNPCType": 475
+  },
+  {
+    "NPCType": 473,
+    "NpcStack": 1,
+    "Action": 0,
+    "ItemType": 3091,
+    "ItemStack": 1,
+    "OnlyEqualItemStack": true,
+    "CrimsonNPCType": 474
+  },
+  {
+    "NPCType": 85,
+    "NpcStack": 1,
+    "Action": 0,
+    "ItemType": 327,
+    "ItemStack": 3,
+    "OnlyEqualItemStack": true,
+    "CrimsonNPCType": 85
+  }
+]
