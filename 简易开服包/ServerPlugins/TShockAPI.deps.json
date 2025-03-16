@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "TShockAPI/5.2.2": {
+      "TShockAPI/5.2.3": {
         "dependencies": {
           "BCrypt.Net-Next": "4.0.3",
           "GetText.NET": "1.7.14",
@@ -941,7 +941,7 @@
     }
   },
   "libraries": {
-    "TShockAPI/5.2.2": {
+    "TShockAPI/5.2.3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

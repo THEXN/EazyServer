@@ -5970,6 +5970,17 @@
             Dumps the descriptions of each permission to a file in Markdown format.
             </summary>
         </member>
+        <member name="M:TShockAPI.PlayerData.#ctor(TShockAPI.TSPlayer)">
+            <summary>
+            Sets the default values for the inventory.
+            </summary>
+        </member>
+        <member name="M:TShockAPI.PlayerData.#ctor(System.Boolean)">
+            <summary>
+            Sets the default values for the inventory.
+            </summary>
+            <param name="includingStarterInventory">Is it necessary to load items from TShock's config</param>
+        </member>
         <member name="M:TShockAPI.PlayerData.StoreSlot(System.Int32,System.Int32,System.Byte,System.Int32)">
             <summary>
             Stores an item at the specific storage slot
@@ -5978,6 +5989,13 @@
             <param name="netID"></param>
             <param name="prefix"></param>
             <param name="stack"></param>
+        </member>
+        <member name="M:TShockAPI.PlayerData.StoreSlot(System.Int32,TShockAPI.NetItem)">
+            <summary>
+            Stores an item at the specific storage slot
+            </summary>
+            <param name="slot"></param>
+            <param name="item"></param>
         </member>
         <member name="M:TShockAPI.PlayerData.CopyCharacter(TShockAPI.TSPlayer)">
             <summary>
@@ -6745,6 +6763,56 @@
             Equivalent to WriteToConsole | WriteToLog
             </summary>
         </member>
+        <member name="T:TShockAPI.ConnectionState">
+            <summary>
+            An enum based on the current client's connection state to the server.
+            </summary>
+        </member>
+        <member name="F:TShockAPI.ConnectionState.AwaitingPassword">
+            <summary>
+            The server is password protected and the connection is pending until a password is sent by the client.
+            </summary>
+        </member>
+        <member name="F:TShockAPI.ConnectionState.AwaitingVersionCheck">
+            <summary>
+            The connection has been established, and the client must verify its version.
+            </summary>
+        </member>
+        <member name="F:TShockAPI.ConnectionState.AssigningPlayerSlot">
+            <summary>
+            The server has accepted the client's password to connect and/or the server has verified the client's version string as being correct. The client is now being assigned a player slot.
+            </summary>
+        </member>
+        <member name="F:TShockAPI.ConnectionState.AwaitingPlayerInfo">
+            <summary>
+            The player slot has been received by the client, and the server is now waiting for the player information.
+            </summary>
+        </member>
+        <member name="F:TShockAPI.ConnectionState.RequestingWorldData">
+            <summary>
+            Player information has been received, and the client is requesting world data.
+            </summary>
+        </member>
+        <member name="F:TShockAPI.ConnectionState.ReceivingWorldData">
+            <summary>
+            The world data is being sent to the client.
+            </summary>
+        </member>
+        <member name="F:TShockAPI.ConnectionState.FinalizingWorldLoad">
+            <summary>
+            The world data has been received, and the client is now finalizing the load.
+            </summary>
+        </member>
+        <member name="F:TShockAPI.ConnectionState.RequestingTileData">
+            <summary>
+            The client is requesting tile data.
+            </summary>
+        </member>
+        <member name="F:TShockAPI.ConnectionState.Complete">
+            <summary>
+            The connection process is complete (The player has spawned), and the client has fully joined the game.
+            </summary>
+        </member>
         <member name="F:TShockAPI.TSPlayer.Server">
             <summary>
             This represents the server as a player.
@@ -7257,6 +7325,13 @@
             <param name="style">The teleportation style.</param>
             <returns>True or false.</returns>
         </member>
+        <member name="M:TShockAPI.TSPlayer.TeleportSpawnpoint">
+            <summary>
+            Teleports the player to their spawnpoint. 
+            Teleports to main spawnpoint if their bed is not active.
+            Supports SSC.
+            </summary>
+        </member>
         <member name="M:TShockAPI.TSPlayer.Heal(System.Int32)">
             <summary>
             Heals the player.
@@ -7531,6 +7606,18 @@
             <param name="type">The buff type.</param>
             <param name="time">The buff duration.</param>
             <param name="bypass"></param>
+        </member>
+        <member name="F:TShockAPI.TSPlayer.HandshakeNecessaryPackets">
+            <summary>
+            The list of necessary packets to make sure gets through to the player upon connection (before they finish the handshake).
+            </summary>
+        </member>
+        <member name="M:TShockAPI.TSPlayer.NecessaryPacket(PacketTypes)">
+            <summary>
+            Determines if an outgoing packet is necessary to send to a player before they have finished the connection handshake.
+            </summary>
+            <param name="msgType">The packet type to check against the necessary list.</param>
+            <returns>Whether the packet is necessary for connection or not</returns>
         </member>
         <member name="M:TShockAPI.TSPlayer.SendData(PacketTypes,System.String,System.Int32,System.Single,System.Single,System.Single,System.Int32)">
             <summary>
